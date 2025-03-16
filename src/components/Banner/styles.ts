@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import banner from "../../assets/banner.png";
 
 export const BannerContainer = styled.section`
-  background: url("/public/banner.png") no-repeat center/cover;  
+  background: url(${banner}) no-repeat center/cover;
   height: 400px;
   color: ${({ theme }) => theme.COLORS.WHITE};  
   padding: 40px;
