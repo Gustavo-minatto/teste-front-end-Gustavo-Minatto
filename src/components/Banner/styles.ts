@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import styled from "styled-components";
 
 export const BannerContainer = styled.section`
-background: url(${require("../../assets/banner.png")}) no-repeat center/cover;
-height: 400px;
+  background: url("/src/public/banner.png") no-repeat center/cover;  
+  height: 400px;
   color: ${({ theme }) => theme.COLORS.WHITE};  
   padding: 40px;
   @media (max-width: 800px) { 
