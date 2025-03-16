@@ -1,5 +1,5 @@
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { Container, NewsletterSection, FooterMain, SocialIcons, LinksContainer, LinksColumn } from "./styles";
+import { Container, NewsletterSection, FooterMain, SocialIcons, LinksContainer, LinksColumn, FooterBottom } from "./styles";
 
 export const Footer = () => {
   return (
@@ -10,19 +10,22 @@ export const Footer = () => {
           <p>Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Econverse.</p>
         </div>
         <div className="newsletter-form">
-          <input type="text" placeholder="Digite seu nome" />
+          <div>
+            <input type="text" placeholder="Digite seu nome" />
+            <div className="newsletter-terms">
+              <input type="checkbox" id="terms" />
+              <label htmlFor="terms">Aceito os termos e condições</label>
+            </div>
+          </div>
           <input type="email" placeholder="Digite seu e-mail" />
           <button>INSCREVER</button>
         </div>
-        <div className="newsletter-terms">
-          <input type="checkbox" id="terms" />
-          <label htmlFor="terms">Aceito os termos e condições</label>
-        </div>
+
       </NewsletterSection>
 
       <FooterMain>
         <div className="brand-info">
-          <img src="/public/econverse.png" alt="" />
+          <img src="/econverse.png" alt="" />
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <SocialIcons>
             <FaInstagram />
@@ -55,7 +58,7 @@ export const Footer = () => {
         </LinksContainer>
       </FooterMain>
 
-      <p className="footer-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <FooterBottom>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</FooterBottom>
     </Container>
   );
 };

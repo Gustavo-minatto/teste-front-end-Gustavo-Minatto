@@ -32,9 +32,4 @@ export default createGlobalStyle`
   button{
     border: none;
   }
-  
-  button,a{
-  filter: brightness(0.9);
-  }
-  
 `;

@@ -11,7 +11,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-around;
   max-width: 304px;
-
+  cursor: pointer;
 `;
 export const Title = styled.div`
   font-weight: 300;
