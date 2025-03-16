@@ -32,15 +32,6 @@ Para iniciar o ambiente de desenvolvimento:
 
 npm run dev
 
-# ou com yarn
-
-yarn dev
-
-🧪 Testes
-
-Caso haja testes configurados, execute:
-
-npm test
 
 # ou com yarn
 
@@ -58,10 +49,7 @@ yarn build
 
 Os arquivos serão gerados na pasta dist ou build.
 
-📝 Informações adicionais
-
-Se houver variáveis de ambiente, crie um arquivo .env com as chaves necessárias.
 
 Verifique a documentação do projeto para mais detalhes.
 
-Made with ❤️ by [Gustavo]
+Made with ❤️ by Gustavo
