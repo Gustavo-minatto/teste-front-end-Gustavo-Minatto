@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdOutlineKeyboardArrowLeft, MdChevronRight } from "react-icons/md";
 import { Container, Tags, CarouselWrapper, ArrowButton, ProductListContainer } from "./styles";
 import { ProductCard } from "../ProductCard";
@@ -7,7 +7,26 @@ import { useProdutos } from "../../hook/useProduct";
 export const RelatedProducts = ({ exibirTags = true }) => {
   const { produtos, loading } = useProdutos();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const produtosVisiveis = 4;
+  const [produtosVisiveis, setProdutosVisiveis] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 800) {
+        setProdutosVisiveis(1);
+      } else if (window.innerWidth <= 1200) {
+        setProdutosVisiveis(3);
+      } else {
+        setProdutosVisiveis(4);
+      }
+    };
+
+    handleResize(); // Chama uma vez para definir o estado inicial
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -45,7 +64,7 @@ export const RelatedProducts = ({ exibirTags = true }) => {
         </Tags>
       ) : (
         <div>
-          <h1>Produtos relacionado</h1>
+          <h1>Produtos relacionados</h1>
           <p style={{ textAlign: "center", fontSize: "18px", fontWeight: "bold" }}>Ver todos</p>
         </div>
       )}
@@ -68,4 +87,3 @@ export const RelatedProducts = ({ exibirTags = true }) => {
     </Container>
   );
 };
-

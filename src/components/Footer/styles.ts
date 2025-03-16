@@ -16,10 +16,14 @@ export const NewsletterSection = styled.div`
   padding: 20px;
   text-align: center;
   justify-content: space-around ;
+
   .newsletter-content h2 {
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 32px;
+    @media (max-width: 1200px) {
+      font-size: 2rem;
+    }
   }
 
   .newsletter-content p{
@@ -45,11 +49,10 @@ export const NewsletterSection = styled.div`
     color: #161615;
     padding: 8px 16px;
     border: none;
-    border-radius: 8px  ;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
     max-height: 42px;
-  
   }
 
   .newsletter-terms {
@@ -57,6 +60,23 @@ export const NewsletterSection = styled.div`
     align-items: center;
   }
 
+  @media (max-width: 800px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    gap: 16px;
+
+    .newsletter-form {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .newsletter-form input, .newsletter-form button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
 `;
 
 export const FooterMain = styled.div`
@@ -77,6 +97,14 @@ export const FooterMain = styled.div`
       font-size: 14px;
     }
   }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
 `;
 
 export const SocialIcons = styled.div`
@@ -89,6 +117,10 @@ export const SocialIcons = styled.div`
     height: 24px;
     cursor: pointer;
   }
+
+  @media (max-width: 800px) {
+    justify-content: center;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -97,9 +129,11 @@ export const LinksContainer = styled.div`
   width: 50%;
   text-align: left;
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    gap: 20px;
   }
 `;
 
@@ -122,4 +156,9 @@ export const LinksColumn = styled.div`
 
 export const FooterBottom = styled.div`
   height: 46px;
-`; 
+
+  @media (max-width: 800px) {
+    padding: 10px;
+    font-size: 12px;
+  }
+`;

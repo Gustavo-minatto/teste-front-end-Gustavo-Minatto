@@ -43,7 +43,13 @@ export const Tags = styled.div`
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-    
+  }
+  tr{
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
   }
 `;
 

@@ -7,6 +7,10 @@ export const Container = styled.div`
   padding: 20px;
   gap: 13px;
   color: white;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    display: flex;
+  }
 `;
 
 export const Conteudo = styled.div`
@@ -15,6 +19,10 @@ export const Conteudo = styled.div`
   background: url("/public/partners.png") no-repeat center/cover;  
   width: 635px;
   height: 350px;
+    @media (max-width: 800px) {
+      width: auto;
+      border-radius: 10px;
+  }
 `;
 
 export const TitleArea = styled.div`

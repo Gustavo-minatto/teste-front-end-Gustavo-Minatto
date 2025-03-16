@@ -5,6 +5,11 @@ export const Container = styled.div`
   justify-content: center;
   gap: 42px;
   margin-top: 32px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const Title = styled.h2`
@@ -17,6 +22,10 @@ export const Title = styled.h2`
 export const ItemBrand = styled.div`
   width: 211px;
   height: 211px;
+  @media (max-width: 800px) {
+    width: 120px;
+    height: 120px;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
