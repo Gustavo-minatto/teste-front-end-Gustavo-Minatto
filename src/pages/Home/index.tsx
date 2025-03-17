@@ -16,6 +16,8 @@ const Home: React.FC = () => {
       <Category />
       <RelatedProducts exibirTags={true} />
       <Partners />
+      <RelatedProducts exibirTags={false} />
+      <Partners />
       <Brands />
       <RelatedProducts exibirTags={false} />
       <Footer />
